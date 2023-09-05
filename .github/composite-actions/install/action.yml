@@ -11,9 +11,11 @@ runs:
         node-version: 16
 
     - name: Install dependencies
+      shell: bash
       run: npm install
 
     - name: Check versions
+      shell: bash
       run: |
         echo "Node:" `node --version`
         echo "NPM:" `npm --version`
