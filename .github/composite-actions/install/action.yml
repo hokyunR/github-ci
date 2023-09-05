@@ -4,15 +4,11 @@ description: "Sets up Node.js and runs install"
 runs:
   using: composite
 
-  strategy:
-    matrix:
-      node-version: [16]
-
   steps:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 16
 
     - name: Install dependencies
       run: npm install
